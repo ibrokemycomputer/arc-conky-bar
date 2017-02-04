@@ -1,0 +1,38 @@
+alignment top_left
+background yes
+border_width 1
+default_color ffffff
+double_buffer yes
+draw_outline no
+draw_graph_borders no
+draw_borders no
+draw_shades no
+gap_x 3
+gap_y 32
+maximum_width 1920
+minimum_size 1920 12
+no_buffers yes
+uppercase no
+override_utf8_locale yes
+own_window yes
+own_window_title conky
+own_window_transparent no
+own_window_argb_visual yes
+own_window_argb_value 255
+own_window_colour 2b2e39
+own_window_type panel
+own_window_hints undecorated,below,skip_taskbar,skip_page
+own_window_class conky
+text_buffer_size 8000
+total_run_times 0
+update_interval 1
+use_xft yes
+xftalpha 1.0
+xftfont Edges:pixelsize=10
+short_units yes
+
+
+TEXT
+${color 1793d1}NETWORK: ${color ffffff}  IP: ${color c1c1c1}${execi 30 curl icanhazip.com}   ${color ffffff}     SPEED: ${color c1c1c1}UP ${upspeed enp2s0}/${downspeed enp2s0} DOWN ${goto 360}${color 1793d1}CPU: ${color ffffff}${cpu 
+cpu0}% ${goto 420}${color 1793d1}RAM: ${color ffffff}${memperc}% ${goto 510}${color 1793d1}STORAGE:${color ffffff}   ROOT:  ${color c1c1c1}${fs_used /}/${fs_size /} (${fs_used_perc /}%) ${color ffffff}  HOME: ${color 
+c1c1c1}${fs_used /home}/${fs_size /home} (${fs_used_perc /home}%)${alignr}${color 1793d1} ${if_running ncmpcpp} MUSIC: ${color c1c1c1}${mpd_smart} ${color ffffff} ${mpd_elapsed}/${mpd_length}   ${endif}${if_running spotify}MUSIC: ${color c1c1c1}${exec ~/scripts/spot-art}${color 1793d1}| ${color ffffff}${exec ~/scripts/spot-title}   ${endif}
